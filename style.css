@@ -1,60 +1,99 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Poppins, Arial, sans-serif;
+  font-family: "Times New Roman", serif;
 }
 
 body {
-  margin: 0;
   height: 100vh;
-  background: linear-gradient(135deg, #ffdde1, #fff1eb);
+  background: linear-gradient(135deg, #ffe6e6, #fff5cc);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
+/* Floating emoji background */
+.background-emojis {
+  position: absolute;
+  font-size: 40px;
+  opacity: 0.15;
+  animation: float 20s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-100vh); }
+}
+
+/* Card */
 .card {
   background: white;
-  width: 360px;
-  height: 260px;
-  padding: 30px;
-  border-radius: 25px;
+  padding: 40px;
+  border-radius: 20px;
   text-align: center;
-  position: relative;
+  width: 360px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+.card h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.heart {
+  font-size: 40px;
+  margin-bottom: 30px;
 }
 
 .buttons {
-  margin-top: 40px;
-  position: relative;
-  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 button {
-  padding: 12px 24px;
+  padding: 14px 26px;
   border-radius: 30px;
   border: none;
   font-size: 16px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 #yesBtn {
   background: #ff4d6d;
   color: white;
-  position: relative;
-  z-index: 2;
+}
+
+#yesBtn:hover {
+  transform: scale(1.1);
 }
 
 #noBtn {
   background: #eee;
+  position: relative;
+}
+
+/* Result screen */
+.result {
   position: absolute;
-  right: 0;
+  text-align: center;
+}
+
+.result img {
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
+}
+
+.result h2 {
+  font-size: 28px;
 }
 
 .hidden {
   display: none;
-}
-
-.emoji {
-  font-size: 60px;
 }
