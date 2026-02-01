@@ -1,63 +1,60 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: Poppins, Arial, sans-serif;
 }
 
 body {
+  margin: 0;
   height: 100vh;
-  background: #f9c5d1;
+  background: linear-gradient(135deg, #ffdde1, #fff1eb);
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .card {
-  background: #fff;
-  padding: 40px;
-  border-radius: 20px;
+  background: white;
+  width: 360px;
+  height: 260px;
+  padding: 30px;
+  border-radius: 25px;
   text-align: center;
-  width: 350px;
   position: relative;
-}
-
-.icon {
-  width: 80px;
-  margin-bottom: 20px;
-}
-
-h2 {
-  margin-bottom: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .buttons {
-  display: flex;
-  justify-content: space-between;
+  margin-top: 40px;
   position: relative;
+  height: 80px;
 }
 
 button {
-  padding: 12px 25px;
-  font-size: 16px;
+  padding: 12px 24px;
   border-radius: 30px;
   border: none;
+  font-size: 16px;
   cursor: pointer;
 }
 
 #yesBtn {
   background: #ff4d6d;
   color: white;
+  position: relative;
+  z-index: 2;
 }
 
 #noBtn {
-  background: #ddd;
+  background: #eee;
   position: absolute;
   right: 0;
 }
 
-.hint {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #555;
+.hidden {
+  display: none;
+}
+
+.emoji {
+  font-size: 60px;
 }
